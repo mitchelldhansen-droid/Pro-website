@@ -12,13 +12,14 @@
         }
 
         :root {
-            --dark-blue: #1a365d;
-            --medium-blue: #2c5282;
-            --light-blue: #60a5fa;
-            --lighter-blue: #93c5fd;
+            --dark-blue: #0f1419;
+            --darker-blue: #1a1f2e;
+            --medium-blue: #1e2a3a;
+            --accent-blue: #2d4263;
+            --light-blue: #4a6fa5;
             --deep-orange: #ea580c;
             --white: #ffffff;
-            --light-gray: #f7fafc;
+            --light-gray: #e8eaed;
         }
 
         html {
@@ -28,8 +29,8 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: var(--dark-blue);
-            background-color: var(--white);
+            color: var(--white);
+            background-color: var(--dark-blue);
         }
 
         /* Navigation */
@@ -37,11 +38,12 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: rgba(15, 20, 25, 0.95);
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             z-index: 1000;
             padding: 1rem 2rem;
+            border-bottom: 1px solid var(--accent-blue);
         }
 
         nav ul {
@@ -54,7 +56,7 @@
 
         nav a {
             text-decoration: none;
-            color: var(--medium-blue);
+            color: var(--light-gray);
             font-weight: 500;
             transition: color 0.3s ease;
             position: relative;
@@ -85,7 +87,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--darker-blue) 100%);
             padding: 6rem 2rem 4rem;
         }
 
@@ -108,7 +110,7 @@
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid var(--light-blue);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(234, 88, 12, 0.3);
         }
 
         .hero-text {
@@ -119,21 +121,21 @@
 
         .hero-text h1 {
             font-size: 3.5rem;
-            color: var(--dark-blue);
+            color: var(--white);
             margin-bottom: 0.5rem;
             font-weight: 700;
         }
 
         .hero-text h2 {
             font-size: 2rem;
-            color: var(--medium-blue);
+            color: var(--light-blue);
             margin-bottom: 1rem;
             font-weight: 400;
         }
 
         .hero-text .tagline {
             font-size: 1.3rem;
-            color: var(--medium-blue);
+            color: var(--light-gray);
             font-style: italic;
             margin-bottom: 2rem;
         }
@@ -162,17 +164,17 @@
         .btn-primary:hover {
             background-color: #c24a08;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(234, 88, 12, 0.3);
+            box-shadow: 0 5px 15px rgba(234, 88, 12, 0.5);
         }
 
         .btn-secondary {
             background-color: transparent;
-            color: var(--medium-blue);
-            border: 2px solid var(--medium-blue);
+            color: var(--light-blue);
+            border: 2px solid var(--light-blue);
         }
 
         .btn-secondary:hover {
-            background-color: var(--medium-blue);
+            background-color: var(--light-blue);
             color: white;
             transform: translateY(-2px);
         }
@@ -186,7 +188,7 @@
 
         section h2 {
             font-size: 2.5rem;
-            color: var(--dark-blue);
+            color: var(--white);
             margin-bottom: 1rem;
             position: relative;
             display: inline-block;
@@ -204,14 +206,14 @@
 
         /* About Section */
         #about {
-            background-color: var(--light-gray);
+            background-color: var(--darker-blue);
         }
 
         .about-content {
             margin-top: 3rem;
             font-size: 1.1rem;
             line-height: 1.8;
-            color: var(--medium-blue);
+            color: var(--light-gray);
         }
 
         .about-content p {
@@ -219,23 +221,31 @@
         }
 
         /* Experience Section */
+        .experience-subheader {
+            margin-top: 2rem;
+            font-size: 1rem;
+            color: var(--light-blue);
+            font-style: italic;
+            text-align: center;
+        }
+
         .experience-item {
             margin-top: 3rem;
             padding: 2rem;
-            background-color: var(--light-gray);
+            background-color: var(--medium-blue);
             border-radius: 10px;
-            border-left: 4px solid var(--light-blue);
+            border-left: 4px solid var(--deep-orange);
         }
 
         .experience-item h3 {
             font-size: 1.8rem;
-            color: var(--dark-blue);
+            color: var(--white);
             margin-bottom: 0.5rem;
         }
 
         .experience-item h4 {
             font-size: 1.3rem;
-            color: var(--medium-blue);
+            color: var(--light-blue);
             margin-bottom: 0.5rem;
         }
 
@@ -252,24 +262,24 @@
 
         .experience-item li {
             margin-bottom: 0.8rem;
-            color: var(--medium-blue);
+            color: var(--light-gray);
         }
 
         /* Projects Section */
         #projects {
-            background-color: var(--light-gray);
+            background-color: var(--darker-blue);
         }
 
         .featured-project {
             margin-top: 3rem;
-            background-color: white;
+            background-color: var(--medium-blue);
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         .project-header {
-            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--medium-blue) 100%);
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--light-blue) 100%);
             color: white;
             padding: 2.5rem;
         }
@@ -284,11 +294,31 @@
             opacity: 0.9;
         }
 
+        .project-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
+            background-color: var(--dark-blue);
+        }
+
+        .project-images img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-images img:hover {
+            transform: scale(1.05);
+        }
+
         .project-stats {
             display: flex;
             gap: 2rem;
             padding: 2rem 2.5rem;
-            background-color: var(--light-gray);
+            background-color: var(--darker-blue);
             flex-wrap: wrap;
         }
 
@@ -305,7 +335,7 @@
         }
 
         .stat-label {
-            color: var(--medium-blue);
+            color: var(--light-gray);
             font-size: 0.9rem;
         }
 
@@ -314,7 +344,7 @@
         }
 
         .project-content h4 {
-            color: var(--dark-blue);
+            color: var(--white);
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
@@ -328,14 +358,22 @@
 
         .contribution-item {
             padding: 1rem;
-            background-color: var(--light-gray);
+            background-color: var(--darker-blue);
             border-radius: 8px;
-            border-left: 3px solid var(--light-blue);
+            border-left: 3px solid var(--deep-orange);
+        }
+
+        .contribution-item strong {
+            color: var(--light-blue);
         }
 
         /* Company Grid */
         .companies-section {
             margin-top: 4rem;
+        }
+
+        .companies-section h2 {
+            margin-top: 3rem;
         }
 
         .companies-grid {
@@ -347,20 +385,20 @@
 
         .company-item {
             padding: 2rem;
-            background-color: white;
+            background-color: var(--medium-blue);
             border-radius: 10px;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         .company-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 20px rgba(234, 88, 12, 0.3);
         }
 
         .company-item h5 {
-            color: var(--medium-blue);
+            color: var(--light-gray);
             font-size: 1.1rem;
         }
 
@@ -374,12 +412,12 @@
 
         .skill-category {
             padding: 2rem;
-            background-color: var(--light-gray);
+            background-color: var(--medium-blue);
             border-radius: 10px;
         }
 
         .skill-category h3 {
-            color: var(--dark-blue);
+            color: var(--white);
             margin-bottom: 1rem;
             font-size: 1.4rem;
         }
@@ -390,7 +428,7 @@
 
         .skill-category li {
             padding: 0.5rem 0;
-            color: var(--medium-blue);
+            color: var(--light-gray);
             position: relative;
             padding-left: 1.5rem;
         }
@@ -405,12 +443,16 @@
 
         /* Contact Section */
         #contact {
-            background-color: var(--light-gray);
+            background-color: var(--darker-blue);
             text-align: center;
         }
 
         .contact-content {
             margin-top: 3rem;
+        }
+
+        .contact-content p {
+            color: var(--light-gray);
         }
 
         .contact-links {
@@ -426,27 +468,28 @@
             align-items: center;
             gap: 0.5rem;
             padding: 1rem 2rem;
-            background-color: white;
+            background-color: var(--medium-blue);
             border-radius: 10px;
             text-decoration: none;
-            color: var(--medium-blue);
+            color: var(--light-gray);
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         .contact-link:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 20px rgba(234, 88, 12, 0.3);
             color: var(--deep-orange);
         }
 
         /* Footer */
         footer {
             background-color: var(--dark-blue);
-            color: white;
+            color: var(--light-gray);
             text-align: center;
             padding: 2rem;
+            border-top: 1px solid var(--accent-blue);
         }
 
         /* Responsive */
@@ -517,20 +560,14 @@
         <h2>About Me</h2>
         <div class="about-content">
             <p>
-                I'm an experienced game producer with a passion for helping teams thrive. My approach centers on servant leadership—I believe in leading by unblocking others, giving people their time back, and empowering them to do their best work. Whether it's managing cross-platform launches, coordinating localization across 13 languages, or facilitating collaboration between design, engineering, art, and QA, I focus on marrying efficiency with empathy.
-            </p>
-            <p>
-                Throughout my career in game development and publishing, I've worked on PC (Steam/GOG), Console (Sony/Microsoft), and Mobile (iOS/Android) platforms. My most recent role as Assistant Producer at Digital Extremes taught me how to support developers and other producers while managing complex live-ops products. I'm a lifelong learner, ICAgile Certified Professional, and someone who values humility, collaboration, and driving results.
-            </p>
-            <p>
-                I'm looking for my next challenge—a place where I can grow and help others grow in concert. A role where I can help multiple teams move fast, make it right, and make it fun.
+                I'm an experienced producer looking for my next great job in Games. I have worked in Development and Publishing on PC (Steam/GOG), Console (Sony/Microsoft), and Mobile (iOS/Android). My passion to help others paired with my own creative drive and necessary humility, makes me suited to lead by serving others. In my most recent work as an Assistant Producer at Digital Extremes, I've learned how to facilitate developers and other producers, as well as interact with clients and development partners to help create and publish a successful Live-Ops Product. I'm looking for a place where I can grow and help others grow in concert; A role where I can be truly challenged and help multiple teams move fast, make it right, and make it fun.
             </p>
         </div>
     </section>
 
     <!-- Experience Section -->
     <section id="experience">
-        <h2>Experience</h2>
+        <h2>Most Recently</h2>
         
         <div class="experience-item">
             <h3>Assistant Producer</h3>
@@ -546,17 +583,7 @@
             </ul>
         </div>
 
-        <div class="experience-item">
-            <h3>Remote Account Manager & Master Sales Trainer</h3>
-            <h4>Amplity & Syneos Health</h4>
-            <p class="date">February 2019 - April 2022</p>
-            <ul>
-                <li>Managed over 1,000 client accounts with responsibility for sales, CRM tracking, data analytics, and software implementation assistance</li>
-                <li>Drove business and marketing development totaling $3 million in sales in 2021, representing 679% annual growth</li>
-                <li>Developed and maintained expansive co-employment and client relationships across 3 client managers and over 180 team members</li>
-                <li>Successfully onboarded and trained over 15 new hires on software, soft skills, live coaching, and reporting to management</li>
-            </ul>
-        </div>
+        <p class="experience-subheader">More experience available upon request</p>
     </section>
 
     <!-- Projects Section -->
@@ -567,6 +594,12 @@
             <div class="project-header">
                 <h3>Wayfinder</h3>
                 <p>Assistant Producer | Cross-Platform Co-Op ARPG | Digital Extremes & Airship Syndicate</p>
+            </div>
+
+            <div class="project-images">
+                <!-- Add your own Wayfinder screenshots here. Download them from Steam and save as wayfinder1.jpg, wayfinder2.jpg, wayfinder3.jpg -->
+                <!-- Example: <img src="wayfinder1.jpg" alt="Wayfinder Gameplay"> -->
+                <!-- For now these are placeholder images that will hide if they don't load -->
             </div>
             
             <div class="project-stats">
@@ -624,22 +657,35 @@
             <div class="companies-grid">
                 <div class="company-item"><h5>Digital Extremes</h5></div>
                 <div class="company-item"><h5>Airship Syndicate</h5></div>
+                <div class="company-item"><h5>Gamescribes</h5></div>
+                <div class="company-item"><h5>Nitro</h5></div>
+                <div class="company-item"><h5>Sony</h5></div>
+                <div class="company-item"><h5>Microsoft</h5></div>
+                <div class="company-item"><h5>iOS</h5></div>
+                <div class="company-item"><h5>Android</h5></div>
+            </div>
+            
+            <h2>Companies I've Pitched To</h2>
+            <div class="companies-grid">
+                <div class="company-item"><h5>Devolver Digital</h5></div>
                 <div class="company-item"><h5>Supergiant Games</h5></div>
                 <div class="company-item"><h5>Hooded Horse</h5></div>
                 <div class="company-item"><h5>Freedom Games</h5></div>
                 <div class="company-item"><h5>Daedalic Entertainment</h5></div>
                 <div class="company-item"><h5>Fireshine Games</h5></div>
-                <div class="company-item"><h5>Gamescribes</h5></div>
                 <div class="company-item"><h5>Midwest Games</h5></div>
+                <div class="company-item"><h5>And More</h5></div>
             </div>
-            
-            <h2 style="margin-top: 3rem;">Interview Experience</h2>
+
+            <h2>Interview Experience</h2>
             <div class="companies-grid">
                 <div class="company-item"><h5>2K Games</h5></div>
                 <div class="company-item"><h5>Electronic Arts (EA)</h5></div>
                 <div class="company-item"><h5>Blizzard Entertainment</h5></div>
                 <div class="company-item"><h5>Amazon Games</h5></div>
                 <div class="company-item"><h5>Rockstar Games</h5></div>
+                <div class="company-item"><h5>Naughty Dog</h5></div>
+                <div class="company-item"><h5>Firaxis Games</h5></div>
             </div>
         </div>
     </section>
@@ -699,7 +745,7 @@
     <section id="contact">
         <h2>Let's Connect</h2>
         <div class="contact-content">
-            <p style="font-size: 1.2rem; color: var(--medium-blue); margin-bottom: 2rem;">
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">
                 I'm always interested in hearing about new opportunities and challenges in game production.
             </p>
             <div class="contact-links">
