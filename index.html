@@ -382,6 +382,10 @@
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 120px;
         }
 
         .company-item:hover {
@@ -392,6 +396,18 @@
         .company-item h5 {
             color: var(--light-gray);
             font-size: 1.1rem;
+        }
+
+        .company-item img {
+            max-width: 120px;
+            max-height: 60px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+            opacity: 0.9;
+        }
+
+        .company-item:hover img {
+            opacity: 1;
         }
 
         /* Skills Section */
@@ -649,37 +665,84 @@
         <div class="companies-section">
             <h2>Companies I've Worked With</h2>
             <div class="companies-grid">
-                <div class="company-item"><h5>Digital Extremes</h5></div>
-                <div class="company-item"><h5>Airship Syndicate</h5></div>
-                <div class="company-item"><h5>Gamescribes</h5></div>
-                <div class="company-item"><h5>Nitro</h5></div>
-                <div class="company-item"><h5>Sony</h5></div>
-                <div class="company-item"><h5>Microsoft</h5></div>
-                <div class="company-item"><h5>iOS</h5></div>
-                <div class="company-item"><h5>Android</h5></div>
+                <div class="company-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Digital_Extremes_logo.svg/320px-Digital_Extremes_logo.svg.png" alt="Digital Extremes" onerror="this.onerror=null; this.parentElement.innerHTML='<h5>Digital Extremes</h5>';">
+                </div>
+                <div class="company-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bc/Airship_Syndicate_logo.png/300px-Airship_Syndicate_logo.png" alt="Airship Syndicate" onerror="this.onerror=null; this.parentElement.innerHTML='<h5>Airship Syndicate</h5>';">
+                </div>
+                <div class="company-item">
+                    <h5>Gamescribes</h5>
+                </div>
+                <div class="company-item">
+                    <h5>Nitro</h5>
+                </div>
+                <div class="company-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sony_logo.svg/320px-Sony_logo.svg.png" alt="Sony" onerror="this.onerror=null; this.parentElement.innerHTML='<h5>Sony</h5>';">
+                </div>
+                <div class="company-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/320px-Microsoft_logo.svg.png" alt="Microsoft" onerror="this.onerror=null; this.parentElement.innerHTML='<h5>Microsoft</h5>';">
+                </div>
+                <div class="company-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/202px-Apple_logo_black.svg.png" alt="Apple" onerror="this.onerror=null; this.parentElement.innerHTML='<h5>Apple</h5>';">
+                </div>
+                <div class="company-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/170px-Android_robot.svg.png" alt="Android" onerror="this.onerror=null; this.parentElement.innerHTML='<h5>Android</h5>';">
+                </div>
             </div>
             
             <h2>Companies I've Pitched To</h2>
             <div class="companies-grid">
-                <div class="company-item"><h5>Devolver Digital</h5></div>
-                <div class="company-item"><h5>Supergiant Games</h5></div>
-                <div class="company-item"><h5>Hooded Horse</h5></div>
-                <div class="company-item"><h5>Freedom Games</h5></div>
-                <div class="company-item"><h5>Daedalic Entertainment</h5></div>
-                <div class="company-item"><h5>Fireshine Games</h5></div>
-                <div class="company-item"><h5>Midwest Games</h5></div>
+                <div class="company-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Devolver_Digital_logo.svg/320px-Devolver_Digital_logo.svg.png" alt="Devolver Digital" onerror="this.onerror=null; this.parentElement.innerHTML='<h5>Devolver Digital</h5>';">
+                </div>
+                <div class="company-item">
+                    <img src="https://www.supergiantgames.com/images/sg_logo_horizontal_white.png" alt="Supergiant Games" onerror="this.onerror=null; this.parentElement.innerHTML='<h5>Supergiant Games</h5>';">
+                </div>
+                <div class="company-item">
+                    <h5>Hooded Horse</h5>
+                </div>
+                <div class="company-item">
+                    <h5>Freedom Games</h5>
+                </div>
+                <div class="company-item">
+                    <h5>Daedalic Entertainment</h5>
+                </div>
+                <div class="company-item">
+                    <h5>Fireshine Games</h5>
+                </div>
+                <div class="company-item">
+                    <h5>Midwest Games</h5>
+                </div>
+                <div class="company-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Xbox_one_logo.svg/320px-Xbox_one_logo.svg.png" alt="Xbox" onerror="this.onerror=null; this.parentElement.innerHTML='<h5>Xbox</h5>';">
+                </div>
                 <div class="company-item"><h5>And More</h5></div>
             </div>
 
             <h2>Interview Experience</h2>
             <div class="companies-grid">
-                <div class="company-item"><h5>2K Games</h5></div>
-                <div class="company-item"><h5>Electronic Arts (EA)</h5></div>
-                <div class="company-item"><h5>Blizzard Entertainment</h5></div>
-                <div class="company-item"><h5>Amazon Games</h5></div>
-                <div class="company-item"><h5>Rockstar Games</h5></div>
-                <div class="company-item"><h5>Naughty Dog</h5></div>
-                <div class="company-item"><h5>Firaxis Games</h5></div>
+                <div class="company-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/2K_logo.svg/320px-2K_logo.svg.png" alt="2K Games" onerror="this.onerror=null; this.parentElement.innerHTML='<h5>2K Games</h5>';">
+                </div>
+                <div class="company-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Electronic-Arts-Logo.svg/320px-Electronic-Arts-Logo.svg.png" alt="Electronic Arts" onerror="this.onerror=null; this.parentElement.innerHTML='<h5>Electronic Arts (EA)</h5>';">
+                </div>
+                <div class="company-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Blizzard_Entertainment_Logo_2015.svg/320px-Blizzard_Entertainment_Logo_2015.svg.png" alt="Blizzard Entertainment" onerror="this.onerror=null; this.parentElement.innerHTML='<h5>Blizzard Entertainment</h5>';">
+                </div>
+                <div class="company-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Amazon_Games_logo.svg/320px-Amazon_Games_logo.svg.png" alt="Amazon Games" onerror="this.onerror=null; this.parentElement.innerHTML='<h5>Amazon Games</h5>';">
+                </div>
+                <div class="company-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Rockstar_Games_Logo.svg/320px-Rockstar_Games_Logo.svg.png" alt="Rockstar Games" onerror="this.onerror=null; this.parentElement.innerHTML='<h5>Rockstar Games</h5>';">
+                </div>
+                <div class="company-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Naughty_Dog_logo.svg/320px-Naughty_Dog_logo.svg.png" alt="Naughty Dog" onerror="this.onerror=null; this.parentElement.innerHTML='<h5>Naughty Dog</h5>';">
+                </div>
+                <div class="company-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Firaxis_Games_logo.svg/320px-Firaxis_Games_logo.svg.png" alt="Firaxis Games" onerror="this.onerror=null; this.parentElement.innerHTML='<h5>Firaxis Games</h5>';">
+                </div>
             </div>
         </div>
     </section>
