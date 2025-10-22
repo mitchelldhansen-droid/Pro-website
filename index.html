@@ -294,24 +294,17 @@
             opacity: 0.9;
         }
 
-        .project-images {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            padding: 2rem;
-            background-color: var(--dark-blue);
-        }
-
-        .project-images img {
+        .project-banner {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
+            height: auto;
+            display: block;
         }
 
-        .project-images img:hover {
-            transform: scale(1.05);
+        .project-banner img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
         }
 
         .project-stats {
@@ -521,6 +514,10 @@
             section h2 {
                 font-size: 2rem;
             }
+
+            .project-banner img {
+                height: 250px;
+            }
         }
     </style>
 </head>
@@ -596,10 +593,8 @@
                 <p>Assistant Producer | Cross-Platform Co-Op ARPG | Digital Extremes & Airship Syndicate</p>
             </div>
 
-            <div class="project-images">
-                <!-- Add your own Wayfinder screenshots here. Download them from Steam and save as wayfinder1.jpg, wayfinder2.jpg, wayfinder3.jpg -->
-                <!-- Example: <img src="wayfinder1.jpg" alt="Wayfinder Gameplay"> -->
-                <!-- For now these are placeholder images that will hide if they don't load -->
+            <div class="project-banner">
+                <img src="wayfinder1.jpg" alt="Wayfinder Game">
             </div>
             
             <div class="project-stats">
