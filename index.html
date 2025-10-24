@@ -433,6 +433,64 @@
             font-weight: bold;
         }
 
+        /* Education Section */
+        #education {
+            background-color: var(--darker-blue);
+        }
+
+        .education-item {
+            margin-top: 3rem;
+            padding: 2.5rem;
+            background-color: var(--medium-blue);
+            border-radius: 10px;
+            border-left: 4px solid var(--deep-orange);
+        }
+
+        .education-item h3 {
+            font-size: 1.8rem;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .education-item h4 {
+            font-size: 1.3rem;
+            color: var(--light-blue);
+            margin-bottom: 1rem;
+        }
+
+        .degree-section {
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--accent-blue);
+        }
+
+        .certificates-section h4 {
+            font-size: 1.4rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+
+        .education-item ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .education-item li {
+            padding: 0.5rem 0;
+            color: var(--light-gray);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .education-item li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--deep-orange);
+            font-weight: bold;
+        }
+
         /* Contact Section */
         #contact {
             background-color: var(--darker-blue);
@@ -529,6 +587,7 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -745,6 +804,28 @@
                     <li>Conflict Resolution</li>
                     <li>Meeting Facilitation</li>
                     <li>Remote Team Management</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education & Certifications</h2>
+
+        <div class="education-item">
+            <div class="degree-section">
+                <h3>Bachelor of Fine Arts</h3>
+                <h4>University of the Arts</h4>
+            </div>
+
+            <div class="certificates-section">
+                <h4>Professional Certifications</h4>
+                <ul>
+                    <li>Game Production and Game Production II</li>
+                    <li>Game Design and Development from F.I.T.</li>
+                    <li>Intro to Unreal 5</li>
+                    <li>Agile/Scrum (ICAgile Certified Professional)</li>
                 </ul>
             </div>
         </div>
