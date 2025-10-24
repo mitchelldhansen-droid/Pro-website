@@ -3,7 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mitchell Hansen | Producer</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Mitchell Hansen | Game Producer</title>
+    <meta name="description" content="Mitchell Hansen - Experienced Game Producer specializing in live operations, localization, and cross-platform publishing. Previously at Digital Extremes working on Wayfinder.">
+    <meta name="keywords" content="game producer, production, digital extremes, wayfinder, game development, live ops, localization, cross-platform, agile, scrum">
+    <meta name="author" content="Mitchell Hansen">
+    
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title" content="Mitchell Hansen | Game Producer Portfolio">
+    <meta property="og:description" content="Experienced game producer looking for opportunities in game development. Specialized in live operations and cross-platform publishing.">
+    <meta property="og:image" content="https://mitchelldhansen-droid.github.io/Pro-website/headshot.jpg">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:url" content="https://mitchelldhansen-droid.github.io/Pro-website/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mitchell Hansen | Game Producer">
+    <meta name="twitter:description" content="Experienced game producer specializing in live ops, localization, and cross-platform publishing.">
+    <meta name="twitter:image" content="https://mitchelldhansen-droid.github.io/Pro-website/headshot.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
     <style>
         * {
             margin: 0;
@@ -382,6 +407,7 @@
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
         }
 
         .company-item:hover {
@@ -392,6 +418,108 @@
         .company-item h5 {
             color: var(--light-gray);
             font-size: 1.1rem;
+            margin: auto;
+        }
+
+        /* Testimonials Section */
+        #testimonials {
+            background-color: var(--dark-blue);
+            padding: 5rem 2rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--medium-blue);
+            border-radius: 15px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            border-top: 3px solid var(--deep-orange);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(234, 88, 12, 0.4);
+        }
+
+        .testimonial-quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--light-gray);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .quote-wrapper {
+            position: relative;
+        }
+
+        .quote-wrapper::before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--deep-orange);
+            position: absolute;
+            top: -24px;
+            left: -24px;
+            opacity: 0.5;
+        }
+
+        .testimonial-author {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .testimonial-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--light-blue);
+        }
+
+        .testimonial-info h4 {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .testimonial-info p {
+            color: var(--light-blue);
+            font-size: 0.95rem;
+        }
+
+        .linkedin-button-container {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .linkedin-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background-color: var(--deep-orange);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(234, 88, 12, 0.3);
+        }
+
+        .linkedin-button:hover {
+            background-color: #c24a08;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(234, 88, 12, 0.5);
         }
 
         /* Skills Section */
@@ -575,6 +703,18 @@
             .project-banner img {
                 height: 250px;
             }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+
+            .testimonial-quote {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -586,6 +726,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -596,7 +737,7 @@
     <section id="hero">
         <div class="hero-content">
             <div class="hero-image">
-                <img src="headshot.jpg" alt="Mitchell Hansen">
+                <img src="headshot.jpg" alt="Mitchell Hansen" width="300" height="300" loading="lazy">
             </div>
             <div class="hero-text">
                 <h1>Mitchell Hansen</h1>
@@ -652,7 +793,7 @@
             </div>
 
             <div class="project-banner">
-                <img src="wayfinder1.jpg" alt="Wayfinder Game">
+                <img src="wayfinder1.jpg" alt="Wayfinder Game" loading="lazy">
             </div>
             
             <div class="project-stats">
@@ -704,8 +845,83 @@
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="companies-section">
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+            <h2>What People Say</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        <span class="quote-wrapper">
+                        If you are looking for Production support, positivity on your team and someone who learns FAST with some great, natural insight, then Mitchell is your person!
+                        </span>
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="Andy.jpg" alt="Andy Johnson" class="testimonial-photo" width="80" height="80" loading="lazy">
+                        <div class="testimonial-info">
+                            <h4>Andy Johnson</h4>
+                            <p>Director of Production at Digital Extremes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        <span class="quote-wrapper">
+                        He makes sure you have what you need to succeed, anticipates some of the things you haven't yet asked for, and has an incredible ability to rally the team and pull people together.
+                        </span>
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="Matthew.jpg" alt="Matthew Hiebert" class="testimonial-photo" width="80" height="80" loading="lazy">
+                        <div class="testimonial-info">
+                            <h4>Matthew Hiebert</h4>
+                            <p>Frontend Developer at Digital Extremes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        <span class="quote-wrapper">
+                        Mitchell helped wrangle a huge amount of documentation to keep it all in order and our entire team on track, ensured we were well organized and delivered feedback to our partners on time. He also happens to be a lovely human being who I cannot recommend highly enough.
+                        </span>
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="Richard.jpg" alt="Richard Browne" class="testimonial-photo" width="80" height="80" loading="lazy">
+                        <div class="testimonial-info">
+                            <h4>Richard Browne</h4>
+                            <p>Head of Publishing at Digital Extremes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        <span class="quote-wrapper">
+                        Mitchell's ability to thrive in his production tasks was invaluable, but it was his positive attitude and exceptional social skills that truly set him apart. Colleagues, fans, and trade show attendees alike were blown away by Mitchell's ability to engage, support, and show off the project.
+                        </span>
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="Allen.jpg" alt="Allen Goode" class="testimonial-photo" width="80" height="80" loading="lazy">
+                        <div class="testimonial-info">
+                            <h4>Allen Goode</h4>
+                            <p>Lead Designer at Digital Extremes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="linkedin-button-container">
+                <a href="https://www.linkedin.com/in/mitchell-hansen-icp/details/recommendations/" target="_blank" rel="noopener noreferrer" class="linkedin-button">
+                    See Full Recommendations on LinkedIn
+                </a>
+            </div>
+    </section>
+
+    <!-- Companies Section -->
+    <div class="companies-section">
             <h2>Companies I've Worked With</h2>
             <div class="companies-grid">
                 <div class="company-item"><h5>Digital Extremes</h5></div>
@@ -741,8 +957,7 @@
                 <div class="company-item"><h5>Naughty Dog</h5></div>
                 <div class="company-item"><h5>Firaxis Games</h5></div>
             </div>
-        </div>
-    </section>
+    </div>
 
     <!-- Skills Section -->
     <section id="skills">
@@ -842,7 +1057,7 @@
                 <a href="mailto:mitchell.d.hansen@gmail.com" class="contact-link">
                     📧 Email Me
                 </a>
-                <a href="https://www.linkedin.com/in/mitchell-hansen-icp/" target="_blank" class="contact-link">
+                <a href="https://www.linkedin.com/in/mitchell-hansen-icp/" target="_blank" rel="noopener noreferrer" class="contact-link">
                     💼 LinkedIn
                 </a>
                 <a href="resume.pdf" class="contact-link" download>
