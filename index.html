@@ -635,6 +635,53 @@
             color: var(--light-gray);
         }
 
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--light-gray);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem;
+            border: 2px solid var(--accent-blue);
+            border-radius: 8px;
+            background-color: var(--darker-blue);
+            color: var(--white);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--light-blue);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
         .contact-links {
             display: flex;
             justify-content: center;
@@ -670,6 +717,14 @@
             text-align: center;
             padding: 2rem;
             border-top: 1px solid var(--accent-blue);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
         }
 
         /* Responsive */
@@ -1055,22 +1110,40 @@
             <p style="font-size: 1.2rem; margin-bottom: 2rem;">
                 I'm always interested in hearing about new opportunities and challenges in game production.
             </p>
-            <div class="contact-links">
-                <a href="mailto:mitchell.d.hansen@gmail.com" class="contact-link">
-                    📧 Email Me
-                </a>
-                <a href="https://www.linkedin.com/in/mitchell-hansen-icp/" target="_blank" rel="noopener noreferrer" class="contact-link">
-                    💼 LinkedIn
-                </a>
-                <a href="resume.pdf" class="contact-link" download>
-                    📄 Download Resume
-                </a>
-            </div>
+            
+            <!-- Contact Form -->
+            <form action="https://formspree.io/f/xovpjpek" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/mitchell-hansen-icp/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                💼 LinkedIn
+            </a>
+            <a href="resume.pdf" class="contact-link" download>
+                📄 Download Resume
+            </a>
+        </div>
         <p>&copy; 2025 Mitchell Hansen. All rights reserved.</p>
         <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
             Looking to move fast, make it right, and make it fun.
