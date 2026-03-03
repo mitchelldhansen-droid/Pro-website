@@ -550,6 +550,90 @@ section h2::after {
 }
 
 /* ============================================
+   TECHNICAL PROJECTS SECTION
+   ============================================ */
+#tech-projects {
+    position: relative;
+}
+
+#tech-projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(74, 111, 165, 0.2), transparent);
+}
+
+.tech-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tech-project-card {
+    padding: 2.25rem;
+    background-color: var(--medium-blue);
+    border-radius: 12px;
+    border-left: 4px solid var(--deep-orange);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.tech-project-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
+}
+
+.tech-project-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--white);
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+}
+
+.tech-project-card .date {
+    color: rgba(74, 111, 165, 0.8);
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.tech-stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.tech-tag {
+    display: inline-block;
+    padding: 0.3rem 0.75rem;
+    background-color: rgba(45, 66, 99, 0.5);
+    color: var(--light-blue);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    border: 1px solid rgba(74, 111, 165, 0.3);
+}
+
+.tech-project-card ul {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.tech-project-card li {
+    margin-bottom: 0.7rem;
+    color: var(--light-gray);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* ============================================
    TESTIMONIALS SECTION
    ============================================ */
 #testimonials {
@@ -1133,6 +1217,10 @@ textarea:focus-visible {
     .project-banner img {
         height: 250px;
         object-fit: cover;
+    }
+
+    .tech-projects-grid {
+        grid-template-columns: 1fr;
     }
 
     .testimonials-grid {
