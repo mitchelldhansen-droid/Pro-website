@@ -502,6 +502,39 @@ section h2::after {
     display: block;
 }
 
+/* Video banner: styled placeholder shows until pillowfort-gameplay.mp4 exists.
+   The <video> layers on top and is transparent when its source is missing, so
+   the caption + gradient behind it stay visible and the layout never breaks. */
+.video-banner {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--medium-blue) 0%, var(--darker-blue) 100%);
+}
+
+.video-banner .banner-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    background: transparent;
+}
+
+.video-banner .video-placeholder-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-blue);
+    font-style: italic;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+    pointer-events: none;
+}
+
 .project-stats {
     display: flex;
     gap: 2rem;
