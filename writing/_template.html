@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--
+    POST TEMPLATE — not linked anywhere on the site.
+    To publish a new post:
+      1. Copy this file to a new name, e.g. my-post-slug.html (lowercase, hyphens).
+      2. Replace every {{TOKEN}} below. Search for "{{" to make sure none are left.
+      3. Generate a 1200x630 OG image (copy _og-template.html, edit the title,
+         screenshot it) and save to /images/writing/{{SLUG}}-og.jpg.
+      4. Add a card for the post to /writing/index.html AND the homepage #writing
+         grid (keep the homepage limited to the 3 most recent).
+    Tokens:
+      {{TITLE}}       — post title
+      {{HOOK}}        — one-sentence description (og:description, card hook)
+      {{SLUG}}        — file name without .html
+      {{TAG}}         — Industry | Dev Log | Production Craft
+      {{DATE_ISO}}    — e.g. 2026-07-14
+      {{DATE_HUMAN}}  — e.g. Jul 14, 2026
+      {{READ_TIME}}   — e.g. 4 min read (word count / ~215 wpm)
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>{{TITLE}} | Mitchell Hansen</title>
+    <meta name="description" content="{{HOOK}}">
+    <meta name="author" content="Mitchell Hansen">
+    <link rel="canonical" href="https://mitchelldhansen-droid.github.io/Pro-website/writing/{{SLUG}}.html">
+
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{TITLE}}">
+    <meta property="og:description" content="{{HOOK}}">
+    <meta property="og:url" content="https://mitchelldhansen-droid.github.io/Pro-website/writing/{{SLUG}}.html">
+    <meta property="og:image" content="https://mitchelldhansen-droid.github.io/Pro-website/images/writing/{{SLUG}}-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="article:published_time" content="{{DATE_ISO}}">
+    <meta property="article:author" content="Mitchell Hansen">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{TITLE}}">
+    <meta name="twitter:description" content="{{HOOK}}">
+    <meta name="twitter:image" content="https://mitchelldhansen-droid.github.io/Pro-website/images/writing/{{SLUG}}-og.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+
+    <!-- Security & Theme -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self';">
+    <meta name="theme-color" content="#0f1419">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{TITLE}}",
+        "description": "{{HOOK}}",
+        "datePublished": "{{DATE_ISO}}",
+        "image": "https://mitchelldhansen-droid.github.io/Pro-website/images/writing/{{SLUG}}-og.jpg",
+        "mainEntityOfPage": "https://mitchelldhansen-droid.github.io/Pro-website/writing/{{SLUG}}.html",
+        "author": {
+            "@type": "Person",
+            "name": "Mitchell Hansen",
+            "url": "https://mitchelldhansen-droid.github.io/Pro-website/"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Top Bar -->
+    <nav class="post-topbar" aria-label="Post navigation">
+        <a href="../index.html">← Mitchell Hansen</a>
+        <a href="index.html">Writing</a>
+    </nav>
+
+    <!-- Post -->
+    <main id="main-content">
+        <article class="post-article">
+            <span class="tech-tag">{{TAG}}</span>
+            <h1>{{TITLE}}</h1>
+            <p class="post-meta">{{DATE_HUMAN}} · {{READ_TIME}}</p>
+
+            <p>Post body goes here. Paragraphs are plain &lt;p&gt; tags.</p>
+
+            <h2>Subhead if the wall of text needs breaking</h2>
+
+            <p>More body text.</p>
+
+            <blockquote>Pull quote treatment for the line worth quoting.</blockquote>
+
+            <p>More body text.</p>
+
+            <hr class="post-divider">
+
+            <!-- Signature block — identical on every post -->
+            <div class="post-signature">
+                <p>
+                    I'm building a 3D cozy builder at <strong>Napkin Sketch Games</strong> and writing about
+                    what AAA production discipline looks like at indie scale.
+                    I'm open to Producer / Technical Producer roles — reach me at
+                    <a href="mailto:mitchell.d.hansen@gmail.com">mitchell.d.hansen@gmail.com</a> or on
+                    <a href="https://www.linkedin.com/in/mitchell-hansen-icp/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/mitchell-hansen-icp/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                LinkedIn
+            </a>
+            <a href="https://github.com/mitchelldhansen-droid" target="_blank" rel="noopener noreferrer" class="contact-link">
+                GitHub
+            </a>
+            <a href="../resume.pdf" class="contact-link" download>
+                Resume
+            </a>
+        </div>
+        <p>&copy; 2026 Mitchell Hansen. All rights reserved.</p>
+        <p class="footer-tagline">
+            Where leadership meets code.
+        </p>
+    </footer>
+</body>
+</html>

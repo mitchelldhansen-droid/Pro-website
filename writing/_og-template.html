@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+    OG IMAGE TEMPLATE — not linked anywhere on the site.
+    Per post: edit the .og-tag text and .og-title text below, then screenshot at
+    exactly 1200x630 with headless Chrome and convert to JPG:
+
+      chrome --headless=new --screenshot=out.png --window-size=1200,630 --hide-scrollbars --virtual-time-budget=10000 <file-url>
+
+    Save the result to /images/writing/<slug>-og.jpg (lowercase — GitHub Pages is case-sensitive).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        background:
+            radial-gradient(ellipse 80% 60% at 25% 50%, rgba(234, 88, 12, 0.09) 0%, transparent 70%),
+            radial-gradient(ellipse 60% 80% at 70% 30%, rgba(74, 111, 165, 0.07) 0%, transparent 60%),
+            linear-gradient(135deg, #0f1419 0%, #1a1f2e 50%, #0d1117 100%);
+        position: relative;
+        font-family: 'DM Sans', sans-serif;
+    }
+
+    /* Dot grid, matching the site hero */
+    body::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle, rgba(74, 111, 165, 0.12) 1px, transparent 1px);
+        background-size: 32px 32px;
+        -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 75%);
+        mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 75%);
+    }
+
+    .og-card {
+        position: absolute;
+        inset: 0;
+        padding: 80px 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .og-tag {
+        align-self: flex-start;
+        padding: 10px 26px;
+        border: 2px solid rgba(74, 111, 165, 0.5);
+        border-radius: 40px;
+        background-color: rgba(45, 66, 99, 0.4);
+        color: #4a6fa5;
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+    }
+
+    .og-title {
+        font-family: 'Chakra Petch', sans-serif;
+        font-size: 84px;
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        max-width: 950px;
+    }
+
+    .og-byline {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+    }
+
+    .og-byline .bar {
+        width: 56px;
+        height: 5px;
+        border-radius: 3px;
+        background: linear-gradient(90deg, #ea580c, rgba(234, 88, 12, 0.25));
+    }
+
+    .og-byline .name {
+        color: rgba(232, 234, 237, 0.75);
+        font-size: 26px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+    }
+</style>
+</head>
+<body>
+    <div class="og-card">
+        <span class="og-tag">Industry</span>
+        <div class="og-title">The Time of the Indie&nbsp;Dev</div>
+        <div class="og-byline">
+            <span class="bar"></span>
+            <span class="name">Mitchell Hansen — Producer &amp; Production Engineer</span>
+        </div>
+    </div>
+</body>
+</html>
