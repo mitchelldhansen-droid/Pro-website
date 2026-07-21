@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>The Day My Game Booted in My Own Hands | Mitchell Hansen</title>
+    <meta name="description" content="For months my game only existed in a debug window inside the Godot editor. Today it booted on my Steam Deck — and I finally just played it.">
+    <meta name="author" content="Mitchell Hansen">
+    <link rel="canonical" href="https://mitchelldhansen-droid.github.io/Pro-website/writing/my-game-booted-in-my-own-hands.html">
+
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The Day My Game Booted in My Own Hands">
+    <meta property="og:description" content="For months my game only existed in a debug window inside the Godot editor. Today it booted on my Steam Deck — and I finally just played it.">
+    <meta property="og:url" content="https://mitchelldhansen-droid.github.io/Pro-website/writing/my-game-booted-in-my-own-hands.html">
+    <meta property="og:image" content="https://mitchelldhansen-droid.github.io/Pro-website/images/writing/my-game-booted-in-my-own-hands-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="article:published_time" content="2026-07-21">
+    <meta property="article:author" content="Mitchell Hansen">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Day My Game Booted in My Own Hands">
+    <meta name="twitter:description" content="For months my game only existed in a debug window inside the Godot editor. Today it booted on my Steam Deck — and I finally just played it.">
+    <meta name="twitter:image" content="https://mitchelldhansen-droid.github.io/Pro-website/images/writing/my-game-booted-in-my-own-hands-og.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+
+    <!-- Security & Theme -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self';">
+    <meta name="theme-color" content="#0f1419">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "The Day My Game Booted in My Own Hands",
+        "description": "For months my game only existed in a debug window inside the Godot editor. Today it booted on my Steam Deck — and I finally just played it.",
+        "datePublished": "2026-07-21",
+        "image": "https://mitchelldhansen-droid.github.io/Pro-website/images/writing/my-game-booted-in-my-own-hands-og.jpg",
+        "mainEntityOfPage": "https://mitchelldhansen-droid.github.io/Pro-website/writing/my-game-booted-in-my-own-hands.html",
+        "author": {
+            "@type": "Person",
+            "name": "Mitchell Hansen",
+            "url": "https://mitchelldhansen-droid.github.io/Pro-website/"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Top Bar -->
+    <nav class="post-topbar" aria-label="Post navigation">
+        <a href="../index.html">← Mitchell Hansen</a>
+        <a href="index.html">Writing</a>
+    </nav>
+
+    <!-- Post -->
+    <main id="main-content">
+        <article class="post-article">
+            <span class="tech-tag">Dev Log</span>
+            <h1>The Day My Game Booted in My Own Hands</h1>
+            <p class="post-meta">Jul 21, 2026 · 3 min read</p>
+
+            <p>
+                The honest truth is that when I went to run the game I'm working on onto my Steam Deck today, I fully expected it to fail. Not because I doubted the code — because I couldn't picture it any other way.
+            </p>
+
+            <p>
+                For months, it has only ever existed in one place: a debug window in the corner of my PC, wrapped inside the Godot editor. Tiny. Contained. One-dimensional. When you see something in exactly one context for long enough, you stop imagining it anywhere else. So when I went to boot it on the Deck, the voice in my head said, flatly, “there's no way this boots.”
+            </p>
+
+            <p>
+                Then the title screen came up. And I about dropped my Deck.
+            </p>
+
+            <p>
+                Hand clasped over my face. Shouting for anyone nearby to come see. And then I did the thing I had never actually done with my own game before: I leaned back and just played it — on a couch, in my hands, on a device built for playing games. Because it was a game now, and I wanted to.
+            </p>
+
+            <h2>One command to the Deck</h2>
+
+            <p>
+                Getting there was its own project. This was the first time I'd ever exported the build at all, and I didn't want to fight the process by hand every time. So I wrote a script that does the whole thing in a single command: it sets the export config so we know where the build is going, pulls the most recent version from main on remote, exports that build, guards against a suspiciously small or large package so a broken export can't slip through, and then pushes it from my computer to the Deck over SSH. It took some work and a couple of broken builds to get right. But eventually — one command, and my game lands on my handheld.
+            </p>
+
+            <h2>Part of something larger</h2>
+
+            <p>
+                Here's what actually shifted. Up to today, it had lived in that one corner of my machine, always behind the Godot bootup wrapper. I'd never just launched my game and been dropped straight into playing it. Doing that — on the same Steam Deck where I play the cozy sims and roguelites I love — made something click that no amount of editor time ever did. People from all walks of life, with all kinds of backgrounds, on all kinds of devices, could pick this up someday. It stopped being a project just for me. It quietly became part of something larger. A community.
+            </p>
+
+            <p>
+                I'll be straight about the part I don't usually say out loud: for most of this, I've felt like I was faking it. Like “game developer” was an elaborate costume I'd stitched together and was hoping no one would look at too closely.
+            </p>
+
+            <blockquote>Today that fell away. I'm a game developer.</blockquote>
+
+            <h2>Standing next to giants</h2>
+
+            <p>
+                It was surreal in another way too. Sitting there, I thought: if I'm going to stand next to giants — the developers whose games are already in this library — I'd better make damn sure I'm ready to be compared to them. This isn't a project I'll submit for a grade one day, where a teacher can squint at where I was going and I can explain my intentions to the class afterward. This is a game I hope people will spend real money on and escape into for dozens, maybe hundreds of hours. So it had better be a good one.
+            </p>
+
+            <p>
+                Production has always been my foundation. Days like today are teaching me that engineering is becoming my edge.
+            </p>
+
+            <p>
+                Nine months ago, I couldn't export a build. Today, my game booted in my own hands — and I got to play it.
+            </p>
+
+            <p>
+                Back at it tomorrow.
+            </p>
+
+            <hr class="post-divider">
+
+            <!-- Signature block — identical on every post -->
+            <div class="post-signature">
+                <p>
+                    I'm building a 3D cozy builder at <strong>Napkin Sketch Games</strong> and writing about
+                    what AAA production discipline looks like at indie scale.
+                    I'm open to Producer / Technical Producer roles — reach me at
+                    <a href="mailto:mitchell.d.hansen@gmail.com">mitchell.d.hansen@gmail.com</a> or on
+                    <a href="https://www.linkedin.com/in/mitchell-hansen-icp/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/mitchell-hansen-icp/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                LinkedIn
+            </a>
+            <a href="https://github.com/mitchelldhansen-droid" target="_blank" rel="noopener noreferrer" class="contact-link">
+                GitHub
+            </a>
+            <a href="../resume.pdf" class="contact-link" download>
+                Resume
+            </a>
+        </div>
+        <p>&copy; 2026 Mitchell Hansen. All rights reserved.</p>
+        <p class="footer-tagline">
+            Where leadership meets code.
+        </p>
+    </footer>
+</body>
+</html>
